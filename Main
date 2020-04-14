@@ -1,0 +1,57 @@
+package Main;
+
+import javax.swing.JOptionPane;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		
+		String dato = JOptionPane.showInputDialog(null, "Digite el numero de conductores que desea registrar.", "Registrar Conductores", JOptionPane.OK_CANCEL_OPTION);
+		int n = Integer.parseInt(dato);
+		
+		Conductor conductores[];
+		conductores = new Conductor[n];
+		
+		Conductor actual;
+		
+		String nombreConductor;
+		String cedulaConductor;
+		String generoConductor;
+		double salarioConductor;
+		double valorMultaConductor;
+		
+		for(int i = 0;i<conductores.length ; i++) {
+			
+			nombreConductor = JOptionPane.showInputDialog(null, "por favor ingrese el nombre del Conductor ["+(i+1)+"]", "Datos del conductor ["+(i+1)+"]", JOptionPane.OK_CANCEL_OPTION);
+			cedulaConductor = JOptionPane.showInputDialog(null, "por favor ingrese la cedula del Conductor ["+nombreConductor+"]", "Datos del conductor ["+(i+1)+"]", JOptionPane.OK_CANCEL_OPTION);
+			generoConductor = JOptionPane.showInputDialog(null, "por favor ingrese el genero del Conductor ["+nombreConductor+"]", "Datos del conductor ["+(i+1)+"]", JOptionPane.OK_CANCEL_OPTION);
+			salarioConductor = Double.parseDouble(JOptionPane.showInputDialog(null, "por favor ingrese el salario del Conductor ["+nombreConductor+"]", "Datos del conductor ["+(i+1)+"]", JOptionPane.OK_CANCEL_OPTION));
+			valorMultaConductor = Double.parseDouble(JOptionPane.showInputDialog(null, "por favor ingrese el valor de la multa ["+nombreConductor+"]", "Datos del conductor", JOptionPane.OK_CANCEL_OPTION));
+			
+			actual = new Conductor();
+			
+			actual.setCedula(cedulaConductor);
+			actual.setNombre(nombreConductor);
+			actual.setGenero(generoConductor);
+			actual.setSalario(salarioConductor);
+			actual.setValorMulta(valorMultaConductor);
+			
+			conductores[i] = actual;
+		}
+		
+		
+		for(Conductor conductor : conductores) {
+			 JOptionPane.showMessageDialog(null, "Los datos del conductor son ["
+					 + " \n Nombre: "+ conductor.getNombre()
+		                + " \n Cedula: "+ conductor.getCedula()
+		                + " \n Genero: "+ conductor.getGenero()
+		                + " \n Salario: "+ conductor.getSalario()
+		                + " \n ValorMulta: "+ conductor.getValorMulta()
+		                + " \n ]"        
+		        );
+			
+		}
+		
+	}
+}
