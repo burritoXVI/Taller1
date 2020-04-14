@@ -1,0 +1,63 @@
+package Main;
+
+public class Conductor {
+
+	
+	private String nombre;
+	private String cedula;
+	private String genero;
+	private double salario;
+	private double valorMulta;
+	
+	
+	public Conductor() {
+		
+	}
+	
+	
+	//Metodos set
+	
+	public void setNombre(String pNombre) {
+		this.nombre = pNombre;
+	}
+	
+	public void setCedula(String pCedula) {
+		this.cedula = pCedula;
+	}
+	
+	public void setGenero(String pGenero) {
+		this.genero = pGenero;
+	}
+	
+	public void setSalario(double pSalario) {
+		this.salario = pSalario;
+	}
+	
+	public void setValorMulta(double pValorMulta) {
+		this.valorMulta = pValorMulta;
+	}
+	
+	
+	//Metodos get
+	
+	public String getNombre() {
+		return nombre;
+	}
+	
+	public String getCedula() {
+		return cedula;
+		
+	}
+	
+	public String getGenero() {
+		return genero;
+	}
+	
+	public double getSalario() {
+		return salario;
+	}
+	
+	public double getValorMulta() {
+		return valorMulta;
+	}
+}
