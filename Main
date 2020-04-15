@@ -6,9 +6,9 @@ public class Main {
 
 	public static void main(String[] args) {
 		
+		double valorTotal = 0;
 		
-		String dato = JOptionPane.showInputDialog(null, "Digite el numero de conductores que desea registrar.", "Registrar Conductores", JOptionPane.OK_CANCEL_OPTION);
-		int n = Integer.parseInt(dato);
+		int n = Integer.parseInt(JOptionPane.showInputDialog(null, "Digite el numero de conductores que desea registrar.", "Registrar Conductores", JOptionPane.OK_CANCEL_OPTION));
 		
 		Conductor conductores[];
 		conductores = new Conductor[n];
@@ -38,6 +38,8 @@ public class Main {
 			actual.setValorMulta(valorMultaConductor);
 			
 			conductores[i] = actual;
+			
+			valorTotal += actual.getValorMulta();
 		}
 		
 		
@@ -51,7 +53,12 @@ public class Main {
 		                + " \n ]"        
 		        );
 			
+			 
+		
+			 
 		}
+		
+		 JOptionPane.showMessageDialog(null, "El valor en total de las multas es: " + valorTotal, "Valor total multas", JOptionPane.CLOSED_OPTION);
 		
 	}
 }
