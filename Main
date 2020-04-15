@@ -58,7 +58,7 @@ public class Main {
 			 
 		}
 		
-		 JOptionPane.showMessageDialog(null, "El valor en total de las multas es: " + valorTotal, "Valor total multas", JOptionPane.CLOSED_OPTION);
+		 JOptionPane.showMessageDialog(null, "El valor total de las multas es: " + valorTotal, "Valor total multas", JOptionPane.CLOSED_OPTION);
 		
 	}
 }
